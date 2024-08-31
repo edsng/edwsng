@@ -1,5 +1,7 @@
 import '../css/Header.css';
 import logo from "/assets/favi.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 function Header() {
 
@@ -8,6 +10,19 @@ function Header() {
             <div className="logo-container">
                 <img src={logo} alt="rxdlne logo" className="logo-icon" />
                 <span className="logo-text">rxdlne</span>
+            </div>
+            <div className="center-container">
+                <div className="social-links">
+                    <a href="https://github.com/edsng" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} />
+                    </a>
+                    <a href="https://linkedin.com/in/edwsng" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </a>
+                    <a href="https://twitter.com/rxdlne" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faTwitter} />
+                    </a>
+                </div>
             </div>
             <nav className="navbar">
                 <ul>
