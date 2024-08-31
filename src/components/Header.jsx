@@ -5,7 +5,7 @@ function Header() {
     return(
         <header className="header">
             <div className="logo-container">
-                <img src="/favi.svg" alt="rxdlne logo" className="logo-icon" />
+                <img src="/favi.png" alt="rxdlne logo" className="logo-icon" />
                 <span className="logo-text">rxdlne</span>
             </div>
             <nav className="navbar">
