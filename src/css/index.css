@@ -27,6 +27,22 @@ body {
   background-color: #242424;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Ensure content is still scrollable */
+html, body {
+  overflow-y: auto;
+}
+
 #root {
   height: 100%;
 }

@@ -11,6 +11,7 @@
   align-items: center;
   padding: 1rem 2rem;
   height: 70px;
+  width: 100%; /* Changed back to 100% */
 }
 
 .logo-container {
