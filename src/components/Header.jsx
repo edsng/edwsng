@@ -1,11 +1,12 @@
 import '../css/Header.css';
+import logo from "/assets/favi.png";
 
 function Header() {
 
     return(
         <header className="header">
             <div className="logo-container">
-                <img src="/favi.png" alt="rxdlne logo" className="logo-icon" />
+                <img src={logo} alt="rxdlne logo" className="logo-icon" />
                 <span className="logo-text">rxdlne</span>
             </div>
             <nav className="navbar">
