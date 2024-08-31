@@ -1,10 +1,11 @@
-function Footer() {
+import '../css/Footer.css';
 
-    return(
-        <footer>
+function Footer() {
+    return (
+        <footer className="footer">
             <p>&copy; {new Date().getFullYear()} rxdlne</p>
         </footer>
     );
 }
 
-export default Footer
+export default Footer;

@@ -1,9 +1,14 @@
+import '../css/Header.css';
+
 function Header() {
 
     return(
-        <header>
-            <h1>rxdlne</h1>
-            <nav>
+        <header className="header">
+            <div className="logo-container">
+                <img src="/favi.svg" alt="rxdlne logo" className="logo-icon" />
+                <span className="logo-text">rxdlne</span>
+            </div>
+            <nav className="navbar">
                 <ul>
                     <li><a href='#'>Home</a></li>
                     <li><a href='#'>About</a></li>
@@ -11,7 +16,6 @@ function Header() {
                     <li><a href='#'>Contact</a></li>
                 </ul>
             </nav>
-            <hr></hr>
         </header>
 
     );
