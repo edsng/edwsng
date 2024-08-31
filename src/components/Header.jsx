@@ -1,5 +1,5 @@
 import '../css/Header.css';
-import logo from "/assets/favi.png";
+import logo from "/assets/icon.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
