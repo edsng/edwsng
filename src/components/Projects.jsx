@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import '../css/Projects.css';
 import carsnpicsImage from '../assets/carsnpics.png'; // Make sure to add this image to your assets folder
-import bitcoinImage from '../assets/btc.png'; // Make sure to add this image to your assets folder
+import bitcoinImage from '../assets/bitcoinImage.png'; // Make sure to add this image to your assets folder
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
