@@ -1,7 +1,6 @@
 .projects-container {
   background-color: #242424;
   margin-top: -70px;
-  padding-top: 70px;
   overflow: hidden;
 }
 
@@ -11,6 +10,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 2rem;
 }
 
 .project-background {
@@ -25,7 +25,21 @@
   max-width: 800px;
   text-align: center;
   z-index: 1;
-  padding: 2rem;
+}
+
+.project-image {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced drop shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-image:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
 }
 
 .project-content h2 {
@@ -59,4 +73,103 @@
   filter: blur(0);
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Specific styles for Cars-n-Pics project */
+.carsnpics-project .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carsnpics-project .project-image {
+  max-width: 200px; /* Adjust as needed */
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); /* Ensure the shadow is applied to the Cars-n-Pics image */
+}
+
+.carsnpics-project .project-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carsnpics-project .try-me-button {
+  margin-top: 2rem;
+}
+
+/* Specific styles for Bitcoin project */
+.bitcoin-project .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bitcoin-project .project-image {
+  max-width: 200px; /* Adjust as needed */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* You can add specific styles for other projects here */
+.bitcoin-project {
+  /* Add specific styles for Bitcoin project */
+}
+
+.fynance-project {
+  /* Add specific styles for Fynance project */
+}
+
+.try-me-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #646cff;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px; /* Fully rounded ends */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 140px;
+  overflow: hidden;
+}
+
+.try-me-button .arrow-icon {
+  opacity: 0;
+  width: 0;
+  margin-left: 0;
+  transition: all 0.3s ease;
+}
+
+.try-me-button:hover {
+  background-color: #4f56cc;
+  width: 170px;
+}
+
+.try-me-button:hover .arrow-icon {
+  opacity: 1;
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* Specific styles for Cars-n-Pics project */
+.carsnpics-project .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carsnpics-project .project-image {
+  max-width: 200px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carsnpics-project .project-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carsnpics-project .try-me-button {
+  margin-top: 2rem;
 }
