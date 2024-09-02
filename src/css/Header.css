@@ -12,6 +12,7 @@
   padding: 1rem 2rem;
   height: 70px;
   width: 100%; /* Changed back to 100% */
+  animation: slideDown 0.5s ease-out 0.3s both;
 }
 
 .logo-container {
@@ -81,4 +82,13 @@
 
 .navbar a:hover {
   color: #646cff;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
