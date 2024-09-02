@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import '../css/Projects.css';
 import carsnpicsImage from '../assets/carsnpics.png'; // Make sure to add this image to your assets folder
 import bitcoinImage from '../assets/bitcoinImage.png'; // Make sure to add this image to your assets folder
@@ -39,6 +39,28 @@ function Projects() {
         }
     ];
 
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                } else {
+                    entry.target.classList.remove('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        projectRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => {
+            projectRefs.current.forEach((ref) => {
+                if (ref) observer.unobserve(ref);
+            });
+        };
+    }, []);
+
     return (
         <div className="projects-container">
             {projects.map((project, index) => (
@@ -50,17 +72,17 @@ function Projects() {
                 >
                     <div className="project-content">
                         {project.image && (
-                            <img src={project.image} alt={project.name} className="project-image" />
+                            <img src={project.image} alt={project.name} className="project-image fade-in-element" />
                         )}
-                        <h2>{project.name}</h2>
-                        <p>{project.description}</p>
-                        <div className="technologies">
+                        <h2 className="fade-in-element">{project.name}</h2>
+                        <p className="fade-in-element">{project.description}</p>
+                        <div className="technologies fade-in-element">
                             {project.technologies.map((tech, techIndex) => (
                                 <span key={techIndex} className="tech-tag">{tech}</span>
                             ))}
                         </div>
                         {project.link && (
-                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="try-me-button">
+                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="try-me-button fade-in-element">
                                 Try Me
                                 <span className="arrow-icon">
                                     <FontAwesomeIcon icon={faArrowRight} />
