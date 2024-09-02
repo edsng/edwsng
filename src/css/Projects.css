@@ -114,13 +114,26 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* You can add specific styles for other projects here */
-.bitcoin-project {
-  /* Add specific styles for Bitcoin project */
+/* Specific styles for Fynance project */
+.fynance-project .project-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.fynance-project {
-  /* Add specific styles for Fynance project */
+.fynance-project .project-image {
+  max-width: 200px; /* Adjust as needed */
+  border: 2px solid #ffffff;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); /* Ensure the shadow is applied to the Cars-n-Pics image */
+}
+
+.fynance-project .project-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.fynance-project .try-me-button {
+  margin-top: 2rem;
 }
 
 .try-me-button {

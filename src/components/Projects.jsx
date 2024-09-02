@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import '../css/Projects.css';
 import carsnpicsImage from '../assets/carsnpics.png'; // Make sure to add this image to your assets folder
 import bitcoinImage from '../assets/bitcoinImage.png'; // Make sure to add this image to your assets folder
+import fynance from '../assets/fynance.png'; // Make sure to add this image to your assets folder
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,7 +33,9 @@ function Projects() {
             description: 'AI-powered financial advisor',
             technologies: ['React', 'Node.js', 'PostgreSQL'],
             bgColor: '#3a3a3a',
-            className: 'fynance-project'
+            image: fynance,
+            className: 'fynance-project',
+            link: 'https://www.example.com/fynance' // Replace with actual link
         }
     ];
 
