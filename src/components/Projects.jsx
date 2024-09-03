@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../css/Projects.css';
 import carsnpicsImage from '../assets/carsnpics.png'; // Make sure to add this image to your assets folder
@@ -21,6 +21,22 @@ const FadeInWhenVisible = ({ children }) => {
 			animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
 			transition={{ duration: 0.5 }}
 		>
+			{children}
+		</motion.div>
+	);
+};
+
+const ParallaxSection = ({ children, offset = 50 }) => {
+	const ref = useRef(null);
+	const { scrollYProgress } = useScroll({
+		target: ref,
+		offset: ["start end", "end start"]
+	});
+
+	const y = useTransform(scrollYProgress, [0, 1], [0, offset]);
+
+	return (
+		<motion.div ref={ref} style={{ y }}>
 			{children}
 		</motion.div>
 	);
@@ -65,36 +81,38 @@ function Projects() {
 					className={`project-section ${project.className}`}
 					style={{backgroundColor: project.bgColor}}
 				>
-					<div className="project-content">
-						<FadeInWhenVisible>
-							{project.image && (
-								<img src={project.image} alt={project.name} className="project-image" />
-							)}
-						</FadeInWhenVisible>
-						<FadeInWhenVisible>
-							<h2>{project.name}</h2>
-						</FadeInWhenVisible>
-						<FadeInWhenVisible>
-							<p>{project.description}</p>
-						</FadeInWhenVisible>
-						<FadeInWhenVisible>
-							<div className="technologies">
-								{project.technologies.map((tech, techIndex) => (
-									<span key={techIndex} className="tech-tag">{tech}</span>
-								))}
-							</div>
-						</FadeInWhenVisible>
-						{project.link && (
+					<ParallaxSection offset={-50}>
+						<div className="project-content">
 							<FadeInWhenVisible>
-								<a href={project.link} target="_blank" rel="noopener noreferrer" className="try-me-button">
-									Try Me
-									<span className="arrow-icon">
-										<FontAwesomeIcon icon={faArrowRight} />
-									</span>
-								</a>
+								{project.image && (
+									<img src={project.image} alt={project.name} className="project-image" />
+								)}
 							</FadeInWhenVisible>
-						)}
-					</div>
+							<FadeInWhenVisible>
+								<h2>{project.name}</h2>
+							</FadeInWhenVisible>
+							<FadeInWhenVisible>
+								<p>{project.description}</p>
+							</FadeInWhenVisible>
+							<FadeInWhenVisible>
+								<div className="technologies">
+									{project.technologies.map((tech, techIndex) => (
+										<span key={techIndex} className="tech-tag">{tech}</span>
+									))}
+								</div>
+							</FadeInWhenVisible>
+							{project.link && (
+								<FadeInWhenVisible>
+									<a href={project.link} target="_blank" rel="noopener noreferrer" className="try-me-button">
+										Try Me
+										<span className="arrow-icon">
+											<FontAwesomeIcon icon={faArrowRight} />
+										</span>
+									</a>
+								</FadeInWhenVisible>
+							)}
+						</div>
+					</ParallaxSection>
 				</div>
 			))}
 		</div>

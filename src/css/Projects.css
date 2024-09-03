@@ -1,8 +1,22 @@
+/* Add these styles at the top of your file */
+html, body {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 .projects-container {
   background-color: #242424;
+  overflow-y: scroll;
   margin-top: -70px;
-  overflow: hidden;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
 }
+
+.projects-container::-webkit-scrollbar {
+  background: transparent; /* Chrome/Safari/Webkit */
+  width: 0px;
+}
+
 
 .project-section {
   min-height: 100vh;
@@ -11,6 +25,8 @@
   justify-content: center;
   position: relative;
   padding: 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .project-background {
@@ -168,4 +184,23 @@
   opacity: 1;
   width: 20px;
   margin-left: 10px;
+}
+
+/* Add these styles at the end of your file */
+@media (max-height: 800px) {
+  .project-section {
+    padding: 1rem;
+  }
+  
+  .project-content {
+    padding: 1rem;
+  }
+  
+  .project-content h2 {
+    font-size: 2.5rem;
+  }
+  
+  .project-content p {
+    font-size: 1rem;
+  }
 }
