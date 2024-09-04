@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../css/Projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faInfoCircle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import ImageCarousel from './ImageCarousel';
+
+//Import images
 import carsnpicsImage from '../assets/carsnpics.png';
 import bitcoinImage from '../assets/bitcoinImage.png';
 import fynance from '../assets/fynance.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faInfoCircle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import LSTMresults from '../assets/LSTMresults.png';
+import kNNresults from '../assets/kNNresults.png';
 
 const FadeInWhenVisible = ({ children }) => {
 	const [ref, inView] = useInView({
@@ -40,7 +45,12 @@ function Projects() {
 			link: 'https://www.example.com/cars-n-pics',
 			purpose:'Connecting car enthusiasts - one shot at a time',
 			details: "Cars-n-Pics is a dedicated platform designed to help photo-videographers transition into freelance work within the car community. A major challenge for photo-videographers is the lack of fair compensation for their work. Many car enthusiasts have a disparity in their expectations of pricing, often underestimating the effort and time invested in each picture. Cars n Pics bridges this gap by allowing car owners to find photo-videographers at any price range and providing media producers with job opportunities at all levels.",
-			detailImages: [carsnpicsImage] // Add more images as needed
+			detailImages: [carsnpicsImage, carsnpicsImage, carsnpicsImage], // Add three images
+			detailTexts: [
+				"Context text for image 1",
+				"Context text for image 2",
+				"Context text for image 3"
+			]
 		},
 		{
 			name: 'Bitcoin ML Time Series Forecasting',
@@ -50,9 +60,13 @@ function Projects() {
 			image: bitcoinImage,
 			className: 'bitcoin-project',
 			purpose:'k-Nearest Neighbors and LSTM',
-			details: "The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications. With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends.",
-			detailImages: [bitcoinImage] // Add more images as needed
-
+			details: "The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications. With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends with results beating several research papers.",
+			detailImages: [kNNresults, LSTMresults, bitcoinImage], // Add more images as needed
+			detailTexts: [
+				"Our k-NN model was able to capture 95.93% of variability in BTC prices as well as boast a significantly low 6.73% error in its predictions.",
+				"Our LSTM model was able to capture 90.09% of variability in BTC prices. While not outperforming the k-NN model, it still performed decently with a Mean Absolute Error of $3580.96.",
+				"We sourced daily price data from 2014 - 2024 sourced from yahoo finance, and used advanced feature engineering techniques to create a comprehensive dataset for our models."
+			]
 		},
 		{
 			name: 'Fynance',
@@ -64,8 +78,12 @@ function Projects() {
 			link: 'https://www.example.com/fynance', // Replace with actual link
 			purpose:'Your personal AI financial advisor',
 			details: "AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
-			detailImages: [fynance] // Add more images as needed
-
+			detailImages: [fynance, fynance, fynance], // Add more images as needed
+			detailTexts: [
+				"Context text for image 1",
+				"Context text for image 2",
+				"Context text for image 3"
+			]
 		}
 	];
 
@@ -148,9 +166,7 @@ function Projects() {
 									</button>
 								</div>
 								<div className="detail-image-container">
-									{project.detailImages.map((image, imgIndex) => (
-										<img key={imgIndex} src={image} alt={`${project.name} details ${imgIndex + 1}`} className="detail-image" />
-									))}
+									<ImageCarousel images={project.detailImages} texts={project.detailTexts} />
 								</div>
 							</motion.div>
 						)}
