@@ -152,42 +152,9 @@ html, body {
   margin-top: 2rem;
 }
 
-.try-me-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  padding: 0.5rem 2rem;
-  background-color: #646cff;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px; /* Fully rounded ends */
-  font-weight: bold;
-  transition: all 0.3s ease;
-  width: 140px;
-  overflow: hidden;
-}
-
-.try-me-button .arrow-icon {
-  opacity: 0;
-  width: 0;
-  margin-left: 0;
-  transition: all 0.3s ease;
-}
-
-.try-me-button:hover {
-  background-color: #4f56cc;
-  width: 160px;
-}
-
-.try-me-button:hover .arrow-icon {
-  opacity: 1;
-  width: 20px;
-  margin-left: 10px;
-}
 
 /* Add these styles at the end of your file */
-@media (max-height: 800px) {
+@media (max-height: 400px) {
   .project-section {
     padding: 1rem;
   }
@@ -203,4 +170,201 @@ html, body {
   .project-content p {
     font-size: 1rem;
   }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.learn-more-button,
+.try-me-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 110px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 1;
+    font-size: 14px; /* Ensure consistent font size */
+    letter-spacing: 1px; /* Add slight letter spacing for better readability */
+
+    margin-top: 5px;
+}
+
+.learn-more-button {
+    background-color: #8CA4BB;
+}
+
+.learn-more-button:hover {
+    background-color: #516E89;
+    width: 130px; /* Match the hover width of try-me-button */
+}
+
+.try-me-button {
+    background-color: #646cff;
+    width: 80px;
+}
+
+.try-me-button:hover {
+    background-color: #4f56cc;
+    width: 100px;
+}
+
+.learn-more-button .arrow-icon,
+.try-me-button .arrow-icon {
+    opacity: 0;
+    width: 0;
+    margin-left: 0;
+    transition: all 0.3s ease;
+}
+
+.learn-more-button:hover .arrow-icon,
+.try-me-button:hover .arrow-icon {
+    opacity: 1;
+    width: 20px;
+    margin-left: 10px;
+}
+
+/* Remove any project-specific button styles */
+.carsnpics-project .try-me-button,
+.fynance-project .try-me-button {
+    margin-top: 5px;
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* This centers the content vertically */
+    text-align: left;
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+.project-details-content {
+    flex: 0 0 33.333%;
+    padding-right: 2rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This centers the content vertically within its container */
+}
+
+.project-details h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.project-details p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.detail-image-container {
+    flex: 0 0 66.666%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; /* This centers the images vertically */
+    gap: 1rem;
+    overflow-y: auto;
+    max-height: calc(100vh - 4rem);
+    width: 400px;
+}
+
+.detail-image {
+    max-width: calc(50% - 0.5rem);
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+}
+
+.back-button {
+    margin-top: 2rem;
+    align-self: flex-start; /* This aligns the button to the start of the flex container */
+}
+
+@media (max-width: 400px) {
+    .project-details {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .project-details-content,
+    .detail-image-container {
+        flex: 0 0 100%;
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .project-details-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .detail-image {
+        max-width: 400px;
+    }
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    height: 35px;
+    width: 110px;
+    overflow: hidden;
+    margin: 0;
+    line-height: 1;
+    font-size: 14px; /* Ensure consistent font size */
+    letter-spacing: 1px; /* Add slight letter spacing for better readability */
+    background-color: #f44336; /* Red color for the back button */
+
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #d32f2f;
+    width: 130px;
+}
+
+.back-button .arrow-icon {
+    opacity: 0;
+    width: 0;
+    margin-right: 0;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover .arrow-icon {
+    opacity: 1;
+    width: 20px;
+    margin-right: 10px;
 }
