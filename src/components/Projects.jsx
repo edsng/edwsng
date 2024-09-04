@@ -49,7 +49,7 @@ function Projects() {
 			bgColor: '#2a2a2a',
 			image: bitcoinImage,
 			className: 'bitcoin-project',
-			purpose:'Connecting car enthusiasts - one shot at a time',
+			purpose:'k-Nearest Neighbors and LSTM',
 			details: "The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications. With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends.",
 			detailImages: [bitcoinImage] // Add more images as needed
 
