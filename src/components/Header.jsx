@@ -31,7 +31,7 @@ function Header({ setCurrentPage }) {
                 <ul>
                     <li><a href="#" onClick={() => handleNavClick('projects')}>Projects</a></li>
                     <li><a href="#" onClick={() => handleNavClick('about')}>About</a></li>
-                    <li><a href="#" onClick={() => handleNavClick('services')}>Services</a></li>
+                    <li><a href="#" onClick={() => handleNavClick('resume')}>CV</a></li>
                     <li><a href="#" onClick={() => handleNavClick('contact')}>Contact</a></li>
                 </ul>
             </nav>
