@@ -80,6 +80,7 @@ function App() {
                 return (
                     <PageTransition key="about">
                         <About />
+                        <Footer />
                     </PageTransition>
                 );
             // Add cases for 'services' and 'contact' later
@@ -105,7 +106,6 @@ function App() {
                             {renderPage()}
                         </AnimatePresence>
                     </main>
-                    <Footer />
                 </div>
             )}
         </>
