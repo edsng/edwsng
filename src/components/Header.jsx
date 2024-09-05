@@ -11,7 +11,7 @@ function Header({ setCurrentPage }) {
     return(
         <header className="header">
             <div className="logo-container">
-                <img src={logo} alt="rxdlne logo" className="logo-icon" />
+                <a href="#" onClick={() => handleNavClick('projects')}><img src={logo} alt="rxdlne logo" className="logo-icon" /></a>
                 <span className="logo-text">rxdlne</span>
             </div>
             <div className="center-container">
