@@ -1,0 +1,115 @@
+.cv-container {
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.cv-content {
+  width: 100%;
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.cv-content h1 {
+  font-size: 2.5rem;
+  color: #646cff;
+  margin-bottom: 2rem;
+}
+
+.cv-content section {
+  margin-bottom: 2rem;
+}
+
+.cv-content h2 {
+  font-size: 1.5rem;
+  color: #acb1ff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.cv-content h2 svg {
+  margin-right: 0.5rem;
+}
+
+.cv-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.cv-item p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.cv-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.download-cv {
+  margin-top: 2rem;
+}
+
+.download-cv a {
+  display: inline-flex;
+  align-items: center;
+  background-color: #646cff;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv a:hover {
+  background-color: #4a51bf;
+}
+
+.download-cv svg {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .cv-container {
+    padding: 1rem;
+  }
+
+  .cv-content h1 {
+    font-size: 2rem;
+  }
+
+  .cv-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .cv-item {
+    padding: 1rem;
+  }
+}

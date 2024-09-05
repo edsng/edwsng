@@ -3,6 +3,7 @@ import { AnimatePresence } from 'framer-motion';
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Projects from './components/Projects.jsx'
+import CV from './components/CV.jsx'
 import About from './components/About.jsx'
 import PageTransition from './components/PageTransition.jsx'
 import LoadingScreen from './components/LoadingScreen.jsx'
@@ -83,6 +84,13 @@ function App() {
                         <Footer />
                     </PageTransition>
                 );
+            case 'cv':
+                return (
+                    <PageTransition key="cv">
+                        <CV />
+                        <Footer />
+                    </PageTransition>
+                );
             // Add cases for 'services' and 'contact' later
             default:
                 return (
@@ -100,7 +108,7 @@ function App() {
             </AnimatePresence>
             {!loading && (
                 <div className={`app-container ${isLoaded ? 'fade-in' : ''}`}>
-                    <Header setCurrentPage={setCurrentPage} />
+                    <Header setCurrentPage={setCurrentPage} currentPage={currentPage} />
                     <main>
                         <AnimatePresence mode="wait">
                             {renderPage()}
