@@ -64,7 +64,9 @@ function Projects() {
 			className: 'bitcoin-project',
 			link: 'https://github.com/edsng/Bitcoin-Price-Forecasting-using-Machine-Learning-Models',
 			purpose:'k-Nearest Neighbors and LSTM',
-			details: "The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications. With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends with results beating several research papers.",
+			details: ["The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications.",
+			"With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends with results beating several research papers."
+			],
 			detailImages: [kNNresults, LSTMresults, btcFeatures], // Add more images as needed
 			detailTexts: [
 				"Our k-NN model was able to capture 95.93% of variability in BTC prices as well as boast a significantly low 6.73% error in its predictions, outperforming several research papers.",
@@ -81,7 +83,9 @@ function Projects() {
 			className: 'fynance-project',
 			link: 'https://www.example.com/fynance', // Replace with actual link
 			purpose:'Your personal AI financial advisor',
-			details: "AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
+			details: ["AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
+			"Track your spending, create budgets, and receive personalized recommendations for improving your financial health."
+			],
 			detailImages: [fynance, fynance, fynance], // Add more images as needed
 			detailTexts: [
 				"Context text for image 1",
