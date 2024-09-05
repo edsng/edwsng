@@ -3,7 +3,10 @@ import logo from "/assets/icon.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
-function Header() {
+function Header({ setCurrentPage }) {
+    const handleNavClick = (page) => {
+        setCurrentPage(page);
+    };
 
     return(
         <header className="header">
@@ -26,15 +29,14 @@ function Header() {
             </div>
             <nav className="navbar">
                 <ul>
-                    <li><a href='#'>Projects</a></li>
-                    <li><a href='#'>About</a></li>
-                    <li><a href='#'>Services</a></li>
-                    <li><a href='#'>Contact</a></li>
+                    <li><a href="#" onClick={() => handleNavClick('projects')}>Projects</a></li>
+                    <li><a href="#" onClick={() => handleNavClick('about')}>About</a></li>
+                    <li><a href="#" onClick={() => handleNavClick('services')}>Services</a></li>
+                    <li><a href="#" onClick={() => handleNavClick('contact')}>Contact</a></li>
                 </ul>
             </nav>
         </header>
-
     );
 }
 
-export default Header
+export default Header;

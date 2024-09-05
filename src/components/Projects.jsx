@@ -5,6 +5,7 @@ import '../css/Projects.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faInfoCircle, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import ImageCarousel from './ImageCarousel';
+import PageTransition from './PageTransition';
 
 //Import images
 import carsnpicsImage from '../assets/carsnpics.png';
@@ -43,7 +44,7 @@ function Projects() {
 			bgColor: '#1a1a1a',
 			image: carsnpicsImage,
 			className: 'carsnpics-project',
-			link: 'https://www.example.com/cars-n-pics',
+			link: 'https://edsng.github.io/carsnpics',
 			purpose:'Connecting car enthusiasts - one shot at a time',
 			details: ["Cars-n-Pics is a dedicated platform designed to help photo-videographers transition into freelance work within the car community. A major challenge for media producers is the conversation of pricing, often going unpaid or undervalued for their work.",
 			"Cars-n-Pics bridges this gap by allowing car owners to find professionals at any price range and providing media producers with job opportunities at all levels."
@@ -81,7 +82,7 @@ function Projects() {
 			bgColor: '#3a3a3a',
 			image: fynance,
 			className: 'fynance-project',
-			link: 'https://www.example.com/fynance', // Replace with actual link
+			link: 'https://edsng.github.io/fynance', // Replace with actual link
 			purpose:'Your personal AI financial advisor',
 			details: ["AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
 			"Track your spending, create budgets, and receive personalized recommendations for improving your financial health."
@@ -100,6 +101,7 @@ function Projects() {
 	};
 
 	return (
+		<PageTransition>
 		<div className="projects-container">
 			{projects.map((project, index) => (
 				<div 
@@ -184,6 +186,7 @@ function Projects() {
 				</div>
 			))}
 		</div>
+		</PageTransition>
 	);
 }
 

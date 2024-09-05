@@ -1,5 +1,6 @@
 .app-container {
     opacity: 0;
+    background-color: #1a1a1a;
     transition: opacity 0.7s ease-in-out;
 }
 
