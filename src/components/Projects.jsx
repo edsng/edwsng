@@ -15,6 +15,9 @@ import btcFeatures from '../assets/features.png';
 import LSTMresults from '../assets/LSTMresults.png';
 import kNNresults from '../assets/kNNresults.png';
 
+import wip from '../assets/wip.png';
+
+
 const FadeInWhenVisible = ({ children }) => {
 	const [ref, inView] = useInView({
 		triggerOnce: true,
@@ -49,7 +52,7 @@ function Projects() {
 			details: ["Cars-n-Pics is a dedicated platform designed to help photo-videographers transition into freelance work within the car community. A major challenge for media producers is the conversation of pricing, often going unpaid or undervalued for their work.",
 			"Cars-n-Pics bridges this gap by allowing car owners to find professionals at any price range and providing media producers with job opportunities at all levels."
 			],
-			detailImages: [carsnpicsImage, carsnpicsImage, carsnpicsImage], // Add three images
+			detailImages: [wip, wip, wip], // Add three images
 			detailTexts: [
 				"Context text for image 1",
 				"Context text for image 2",
@@ -87,7 +90,7 @@ function Projects() {
 			details: ["AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
 			"Track your spending, create budgets, and receive personalized recommendations for improving your financial health."
 			],
-			detailImages: [fynance, fynance, fynance], // Add more images as needed
+			detailImages: [wip, wip, wip], // Add more images as needed
 			detailTexts: [
 				"Context text for image 1",
 				"Context text for image 2",
