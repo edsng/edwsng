@@ -10,6 +10,7 @@ import ImageCarousel from './ImageCarousel';
 import carsnpicsImage from '../assets/carsnpics.png';
 import bitcoinImage from '../assets/bitcoinImage.png';
 import fynance from '../assets/fynance.png';
+import btcFeatures from '../assets/features.png';
 import LSTMresults from '../assets/LSTMresults.png';
 import kNNresults from '../assets/kNNresults.png';
 
@@ -44,7 +45,9 @@ function Projects() {
 			className: 'carsnpics-project',
 			link: 'https://www.example.com/cars-n-pics',
 			purpose:'Connecting car enthusiasts - one shot at a time',
-			details: "Cars-n-Pics is a dedicated platform designed to help photo-videographers transition into freelance work within the car community. A major challenge for photo-videographers is the lack of fair compensation for their work. Many car enthusiasts have a disparity in their expectations of pricing, often underestimating the effort and time invested in each picture. Cars n Pics bridges this gap by allowing car owners to find photo-videographers at any price range and providing media producers with job opportunities at all levels.",
+			details: ["Cars-n-Pics is a dedicated platform designed to help photo-videographers transition into freelance work within the car community. A major challenge for media producers is the conversation of pricing, often going unpaid or undervalued for their work.",
+			"Cars-n-Pics bridges this gap by allowing car owners to find professionals at any price range and providing media producers with job opportunities at all levels."
+			],
 			detailImages: [carsnpicsImage, carsnpicsImage, carsnpicsImage], // Add three images
 			detailTexts: [
 				"Context text for image 1",
@@ -59,11 +62,12 @@ function Projects() {
 			bgColor: '#2a2a2a',
 			image: bitcoinImage,
 			className: 'bitcoin-project',
+			link: 'https://github.com/edsng/Bitcoin-Price-Forecasting-using-Machine-Learning-Models',
 			purpose:'k-Nearest Neighbors and LSTM',
 			details: "The cryptocurrency market has been a significant point of interest in the past decade with Bitcoin leading the space. With a highly volatile market similar to many other securities, predicting Bitcoin's prices has proven to be a challenging task with substantial financial implications. With this project, we created a predictive model for Bitcoin using the K-Nearest Neighbors algorithm alongside the Long Short-Term Memory algorithm, in order to identify coming bull or bear market trends with results beating several research papers.",
-			detailImages: [kNNresults, LSTMresults, bitcoinImage], // Add more images as needed
+			detailImages: [kNNresults, LSTMresults, btcFeatures], // Add more images as needed
 			detailTexts: [
-				"Our k-NN model was able to capture 95.93% of variability in BTC prices as well as boast a significantly low 6.73% error in its predictions.",
+				"Our k-NN model was able to capture 95.93% of variability in BTC prices as well as boast a significantly low 6.73% error in its predictions, outperforming several research papers.",
 				"Our LSTM model was able to capture 90.09% of variability in BTC prices. While not outperforming the k-NN model, it still performed decently with a Mean Absolute Error of $3580.96.",
 				"We sourced daily price data from 2014 - 2024 sourced from yahoo finance, and used advanced feature engineering techniques to create a comprehensive dataset for our models."
 			]
@@ -157,7 +161,9 @@ function Projects() {
 							>
 								<div className="project-details-content">
 									<h2>{project.purpose}</h2>
-									<p>{project.details}</p>
+									{project.details.map((paragraph, index) => (
+										<p key={index}>{paragraph}</p>
+									))}
 									<button onClick={() => toggleProjectDetails(index)} className="back-button">
 										<span className="arrow-icon">
 											<FontAwesomeIcon icon={faArrowLeft} />

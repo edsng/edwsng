@@ -277,6 +277,7 @@ html, body {
     margin-bottom: 1.5rem;
     color: #ffffff;
     line-height: 1.6;
+    max-width: 100%;
 }
 
 .detail-image-container {

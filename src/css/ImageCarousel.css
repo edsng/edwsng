@@ -1,15 +1,16 @@
 .slideshow-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .slideshow-image-container {
     width: 700px;
-    height: 500px;
+    height: 450px;
     position: relative;
     overflow: hidden;
 }
@@ -23,10 +24,15 @@
 }
 
 .slideshow-controls {
+    position: absolute;
+    top: 0;
+    left: -60px; /* Adjust this value to move arrows further from the image */
+    right: -60px; /* Adjust this value to move arrows further from the image */
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-top: 1rem;
+    width: calc(100% + 120px); /* Increase width to account for the moved arrows */
+    height: 100%;
+    pointer-events: none;
 }
 
 .slideshow-button {
@@ -36,10 +42,27 @@
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    align-self: center; /* Center vertically within the controls container */
+    opacity: 0.7;
 }
 
 .slideshow-button:hover {
-    color: #cccccc;
+    color: #ffffff;
+    opacity: 1;
+}
+
+.slideshow-button:first-child {
+    margin-left: -25px;
+}
+
+.slideshow-button:last-child {
+    margin-right: -25px;
 }
 
 .slideshow-text {
