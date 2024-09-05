@@ -7,6 +7,7 @@ import CV from './components/CV.jsx'
 import About from './components/About.jsx'
 import PageTransition from './components/PageTransition.jsx'
 import LoadingScreen from './components/LoadingScreen.jsx'
+import Contact from './components/Contact.jsx'
 
 // Import all your images here
 import logo from "/assets/icon.png";
@@ -91,7 +92,13 @@ function App() {
                         <Footer />
                     </PageTransition>
                 );
-            // Add cases for 'services' and 'contact' later
+            case 'contact':
+                return (
+                    <PageTransition key="contact">
+                        <Contact />
+                        <Footer />
+                    </PageTransition>
+                );
             default:
                 return (
                     <PageTransition key="projects">

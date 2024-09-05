@@ -22,7 +22,7 @@ function Header({ setCurrentPage }) {
                     <a href="https://linkedin.com/in/edwsng" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faLinkedin} />
                     </a>
-                    <a href="https://twitter.com/rxdlne" target="_blank" rel="noopener noreferrer">
+                    <a href="https://twitter.com/edwsng" target="_blank" rel="noopener noreferrer">
                         <FontAwesomeIcon icon={faTwitter} />
                     </a>
                 </div>

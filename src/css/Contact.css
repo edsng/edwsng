@@ -1,0 +1,120 @@
+.contact-container {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 800px;
+    color: #ffffff;
+}
+
+.contact-content h1 {
+    font-size: 2.5rem;
+    color: #646cff;
+    margin-bottom: 2rem;
+}
+
+.contact-content h2 {
+    font-size: 1.5rem;
+    color: #acb1ff;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item svg {
+    font-size: 1.5rem;
+    color: #646cff;
+}
+
+.contact-social-links {
+    margin-bottom: 2rem;
+}
+
+.contact-social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact-social-icons a {
+    font-size: 2rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.contact-social-icons a:hover {
+    color: #646cff;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #646cff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #4a51bf;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1rem;
+    }
+
+    .contact-content h1 {
+        font-size: 2rem;
+    }
+
+    .contact-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .social-icons a {
+        font-size: 1.5rem;
+    }
+}
