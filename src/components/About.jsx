@@ -80,7 +80,7 @@ function About() {
                             My journey in tech has led me to work on a variety of projects that have allowed me to explore different areas of development, from front-end to back-end, and currently machine learning.
                         </motion.p>
                         <motion.p variants={textVariants}>
-                            When I'm not coding, you can find me at photoshoots, experimenting with new recipes in the kitchen, or diving into a new rabbit hole.
+                            When I'm not coding, you can find me at photoshoots, experimenting with new recipes in the kitchen, or diving into new rabbit holes.
                         </motion.p>
                     </motion.div>
                     <motion.div 
