@@ -16,7 +16,7 @@ import LSTMresults from '../assets/LSTMresults.png';
 import kNNresults from '../assets/kNNresults.png';
 
 import wip from '../assets/wip.png';
-
+import fy1 from '../assets/fy1.png';
 
 const FadeInWhenVisible = ({ children }) => {
 	const [ref, inView] = useInView({
@@ -90,9 +90,9 @@ function Projects() {
 			details: ["AI app that utilizes OpenAI’s GPT model through RESTful API integration in order to create personalized long-term plans for debt management, building capital, and building credit efficiently using basic financial information from users.",
 			"Track your spending, create budgets, and receive personalized recommendations for improving your financial health."
 			],
-			detailImages: [wip, wip, wip], // Add more images as needed
+			detailImages: [fy1, wip, wip], // Add more images as needed
 			detailTexts: [
-				"Context text for image 1",
+				"Minimalistic landing page styled with react and framer-motion library",
 				"Context text for image 2",
 				"Context text for image 3"
 			]
